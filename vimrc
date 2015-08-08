@@ -14,7 +14,7 @@ set ignorecase  " Ignore case in search patterns
 set smartcase   " Override 'ignorecase' if search contains upper case characters
 
 " Use Bash-style tab completion
-set wildmode=longest,list,full
+set wildmode=longest,list
 set wildmenu
 
 set foldmethod=syntax
