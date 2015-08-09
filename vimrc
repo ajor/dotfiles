@@ -34,3 +34,15 @@ set tags=./tags;/
 
 " Use Ctrl-n to jump up the tag stack (opposite of Ctrl-t)
 nnoremap <c-n> :tag<cr>
+
+" vim-plug
+call plug#begin('~/.vim/plugged')
+
+Plug 'kien/ctrlp.vim'
+Plug 'Valloric/YouCompleteMe', { 'for': ['c', 'cpp', 'python'], 'do': './install.sh' }
+autocmd! User YouCompleteMe call youcompleteme#Enable()
+
+call plug#end()
+
+" YouCompleteMe settings
+let g:ycm_autoclose_preview_window_after_insertion = 1
