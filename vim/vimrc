@@ -16,9 +16,16 @@ set smartcase   " Override 'ignorecase' if search contains upper case characters
 " Use Bash-style tab completion
 set wildmode=longest,list
 set wildmenu
+set wildignore=*.o,*.swp
 
 set foldmethod=syntax
 set foldlevel=999
+
+" Persistent undo
+set undodir=~/.vim/undodir
+set undofile
+set undolevels=1000
+set undoreload=10000
 
 " File type indentation
 set nocompatible
@@ -35,11 +42,14 @@ set tags=./tags;/
 " Use Ctrl-n to jump up the tag stack (opposite of Ctrl-t)
 nnoremap <c-n> :tag<cr>
 
+" Spell checking
+map <F5> :setlocal spell! spelllang=en_gb<CR>
+
 " vim-plug
 call plug#begin('~/.vim/plugged')
 
 Plug 'kien/ctrlp.vim'
-Plug 'Valloric/YouCompleteMe', { 'for': ['c', 'cpp', 'python'], 'do': './install.sh' }
+Plug 'Valloric/YouCompleteMe', { 'for': ['c', 'cpp', 'python'], 'do': './install.sh --clang-completer' }
 autocmd! User YouCompleteMe call youcompleteme#Enable()
 
 call plug#end()
