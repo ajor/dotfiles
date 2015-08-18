@@ -56,3 +56,8 @@ call plug#end()
 
 " YouCompleteMe settings
 let g:ycm_autoclose_preview_window_after_insertion = 1
+nnoremap <leader>] :YcmCompleter GoTo<cr>
+
+
+set ssop-=options    " do not store global and local values in a session
+set ssop-=folds      " do not store folds
