@@ -21,7 +21,7 @@ function battery(widget)
       percent_text = "<span color='red'>" .. percent_text .. "</span>"
     end
   else
-    percent_text = "<span color='white'> No battery</span>"
+    percent_text = " No battery"
   end
 
   widget:set_markup(percent_text)

@@ -21,7 +21,7 @@ function volume(widget, mode)
 
         status = string.match(status, "%[(o[^%]]*)%]")
         if string.find(status, "on", 1, true) then
-            volume = volume_text .."%"
+            volume = "<span color='white'>".. volume_text .."%</span>"
         else
             volume = "<span color='red'>".. volume_text .."M</span>"
         end
