@@ -49,7 +49,8 @@ map <F5> :setlocal spell! spelllang=en_gb<CR>
 call plug#begin('~/.vim/plugged')
 
 Plug 'kien/ctrlp.vim'
-Plug 'Valloric/YouCompleteMe', { 'for': ['c', 'cpp', 'python'], 'do': './install.sh --clang-completer' }
+Plug 'Valloric/YouCompleteMe', { 'for': ['c', 'cpp', 'python', 'objc', 'objcpp'], 'do': './install.sh --clang-completer' }
+Plug 'ludovicchabant/vim-gutentags'
 autocmd! User YouCompleteMe call youcompleteme#Enable()
 
 call plug#end()
@@ -61,3 +62,10 @@ nnoremap <leader>] :YcmCompleter GoTo<cr>
 
 set ssop-=options    " do not store global and local values in a session
 set ssop-=folds      " do not store folds
+
+let g:ctrlp_user_command = {
+  \ 'types': {
+    \ 1: ['.git/', 'cd %s && git ls-files'],
+    \ },
+  \ 'fallback': 'find %s -type f'
+  \ }
