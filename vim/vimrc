@@ -49,7 +49,7 @@ map <F5> :setlocal spell! spelllang=en_gb<CR>
 call plug#begin('~/.vim/plugged')
 
 Plug 'kien/ctrlp.vim'
-Plug 'Valloric/YouCompleteMe', { 'for': ['c', 'cpp', 'python', 'objc', 'objcpp'], 'do': './install.sh --clang-completer' }
+Plug 'Valloric/YouCompleteMe', { 'for': ['c', 'cpp', 'python', 'objc', 'objcpp'], 'do': './install.py --clang-completer' }
 Plug 'ludovicchabant/vim-gutentags'
 autocmd! User YouCompleteMe call youcompleteme#Enable()
 
@@ -69,3 +69,6 @@ let g:ctrlp_user_command = {
     \ },
   \ 'fallback': 'find %s -type f'
   \ }
+
+" Edit macros
+nnoremap <leader>m  :<c-u><c-r>='let @'. v:register .' = '. string(getreg(v:register))<cr><c-f><left>
