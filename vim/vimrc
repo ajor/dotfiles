@@ -45,12 +45,17 @@ nnoremap <c-n> :tag<cr>
 " Spell checking
 map <F5> :setlocal spell! spelllang=en_gb<CR>
 
+" Delete comment character when joining commented lines
+set formatoptions+=j
+
 " vim-plug
 call plug#begin('~/.vim/plugged')
 
 Plug 'kien/ctrlp.vim'
 Plug 'Valloric/YouCompleteMe', { 'for': ['c', 'cpp', 'python', 'objc', 'objcpp'], 'do': './install.py --clang-completer' }
 Plug 'ludovicchabant/vim-gutentags'
+Plug 'tpope/vim-surround'
+Plug 'tpope/vim-repeat'
 autocmd! User YouCompleteMe call youcompleteme#Enable()
 
 call plug#end()
