@@ -1,6 +1,9 @@
 syntax on
 set background=dark
 
+" Show line number in bottom right corner of screen
+set ruler
+
 " Indentation
 set expandtab
 set tabstop=2
