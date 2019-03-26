@@ -4,6 +4,9 @@ set background=dark
 " Show line number in bottom right corner of screen
 set ruler
 
+" Make backspace work as normal in insert mode
+set backspace=indent,eol,start
+
 " Indentation
 set expandtab
 set tabstop=2
