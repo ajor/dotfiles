@@ -57,7 +57,7 @@ set formatoptions+=j
 " vim-plug
 call plug#begin('~/.vim/plugged')
 
-Plug 'junegunn/fzf'
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 Plug 'ludovicchabant/vim-gutentags'
 Plug 'tpope/vim-fugitive'
