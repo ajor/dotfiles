@@ -1,0 +1,10 @@
+/set irc.server_default.nick "ajor,ajor_,ajor__"
+/set irc.server_default.realname "Alastair Robertson"
+/set irc.server_default.username "ajor"
+
+/secure passphrase XXX
+/secure set oftc_password XXXXX
+/set irc.server.oftc.command "/msg nickserv identify ${sec.data.oftc_password} ajor"
+
+/set irc.look.smart_filter on
+/filter add irc_smart * irc_smart_filter *
