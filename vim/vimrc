@@ -4,6 +4,9 @@ set background=dark
 " Show line number in bottom right corner of screen
 set ruler
 
+" Don't include extra lines of context at top/bottom of screen
+set scrolloff=0
+
 " Make backspace work as normal in insert mode
 set backspace=indent,eol,start
 
@@ -16,6 +19,7 @@ set autoindent
 
 " Searching
 set hlsearch    " Highlight all search results
+set noincsearch " Don't jump to matches until 'enter' is pressed
 set ignorecase  " Ignore case in search patterns
 set smartcase   " Override 'ignorecase' if search contains upper case characters
 
